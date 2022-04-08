@@ -3,7 +3,6 @@ import requests
 import sys
 import os
 
-os.environ['AIRTABLE_APIKEY']=  'keyDrtBN4iiDAF2Nm'
 base_id = 'appxDd09nZFUbJcMn'
 api_key = os.getenv('AIRTABLE_APIKEY')
 headers = {'Authorization': 'Bearer '  + api_key}
