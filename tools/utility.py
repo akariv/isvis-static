@@ -13,7 +13,7 @@ def toCsv(file):
     
     data_file = open(name + '.csv', 'w', encoding='utf-8', newline='')
     fields = list(json_f[0].keys())
-    delete = ['_id', 'id', 'createdAt', 'updatedAt']
+    delete = ['_id', 'createdAt', 'updatedAt']
     fields = [x for x in fields if x not in delete]
     csv_writer = csv.DictWriter(data_file, fieldnames=fields, extrasaction='ignore')
     csv_writer.writeheader()

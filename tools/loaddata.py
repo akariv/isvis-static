@@ -3,8 +3,8 @@ import requests
 import sys
 import os
 
-
-base_id = 'app72pKh6npOppDZY'
+os.environ['AIRTABLE_APIKEY']=  'keyDrtBN4iiDAF2Nm'
+base_id = 'appxDd09nZFUbJcMn'
 api_key = os.getenv('AIRTABLE_APIKEY')
 headers = {'Authorization': 'Bearer '  + api_key}
 def get_airtable_data(table_name):
@@ -17,7 +17,8 @@ def get_airtable_data(table_name):
         new_dict = {'id': elem['id'], 'createdTime': elem['createdTime']}
         new_dict.update(elem['fields'])
         resp.append(new_dict)
-    str_response = json.dumps(resp)
+    
+    str_response = json.dumps((sorted(resp, key = lambda i: i['id'])))
     str_response = 'var '+table_name+'=\n'+str_response[:-1] +'\n];'
     return str_response
 
