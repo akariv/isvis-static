@@ -26,6 +26,8 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v3.1.2
         
+      - run: pip install requests
+        
       # Runs a single command using the runners shell
       - name: Read the data into JS files
         run: python tools/loaddata.py
