@@ -1,6 +1,5 @@
 import json
 import requests
-import sys
 import os
 
 base_id = 'app72pKh6npOppDZY'
@@ -26,7 +25,7 @@ def get_airtable_data(table_name):
 
 
 def process_file(table):
-    with open(f'../js/{table}.js', 'w') as f:
+    with open(f'./js/{table}.js', 'w') as f:
         f.write(get_airtable_data(table))
 
 if __name__ == '__main__':
