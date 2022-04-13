@@ -3,7 +3,7 @@ import requests
 import sys
 import os
 
-base_id = 'appxDd09nZFUbJcMn'
+base_id = 'app72pKh6npOppDZY'
 api_key = os.getenv('AIRTABLE_APIKEY')
 headers = {'Authorization': 'Bearer '  + api_key}
 def get_airtable_data(table_name):
@@ -22,7 +22,7 @@ def get_airtable_data(table_name):
     return str_response
 
 
-
-with open('../js/'+sys.argv[1]+'.js', 'w') as f:
-    f.write(get_airtable_data(sys.argv[1]))
-    f.close()
+for i in ['tickettype', 'introkeys', 'aboutsection', 'importantdates', 'allvideos', 'allEvents']:
+    with open('../js/'+i+'.js', 'w') as f:
+        f.write(get_airtable_data(i))
+        f.close()
