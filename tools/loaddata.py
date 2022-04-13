@@ -14,7 +14,10 @@ def get_airtable_data(table_name):
     airtable_response = airtable_response['records']
     for elem in airtable_response:
         new_dict = {'id': elem['id'], 'createdTime': elem['createdTime']}
-        new_dict.update(elem['fields'])
+        fields = elem['fields']
+        if fields.get('v') == 'false':
+            fields['v'] = False
+        new_dict.update(fields)
         resp.append(new_dict)
     
     str_response = json.dumps((sorted(resp, key = lambda i: i['id'])))
@@ -22,7 +25,11 @@ def get_airtable_data(table_name):
     return str_response
 
 
-for i in ['tickettype', 'introkeys', 'aboutsection', 'importantdates', 'allvideos', 'allEvents']:
-    with open('../js/'+i+'.js', 'w') as f:
-        f.write(get_airtable_data(i))
-        f.close()
+def process_file(table):
+    with open(f'../js/{table}.js', 'w') as f:
+        f.write(get_airtable_data(table))
+
+if __name__ == '__main__':
+    for f in ['aboutsection', 'allvideos', 'importantdates', 'tickettype', 'allEvents', 'introkeys']:
+        print(f'>>> Processing {f}')
+        process_file(f)
