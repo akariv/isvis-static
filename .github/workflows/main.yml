@@ -33,6 +33,10 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Commit and push the new files
         run: |
+        
+          git config --global user.name "camilabarca"
+          git config --global user.email "camila.labarca@ug.uchile.cl"
+
           git add js/*js
           git commit -m "Automatic update of web site"
           git push
