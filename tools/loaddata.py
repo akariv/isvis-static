@@ -9,7 +9,7 @@ headers = {'Authorization': 'Bearer '  + api_key}
 def get_airtable_data(table_name):
     resp = []
     url = "https://api.airtable.com/v0/" + base_id + "/" + table_name
-    response = requests.get(url, headers=headers)
+    response = requests.get(url, headers=headers, params={'view': 'Grid view'})
     airtable_response = response.json()
     airtable_response = airtable_response['records']
     for elem in airtable_response:
@@ -17,7 +17,7 @@ def get_airtable_data(table_name):
         new_dict.update(elem['fields'])
         resp.append(new_dict)
     
-    str_response = json.dumps((sorted(resp, key = lambda i: i['id'])))
+    str_response = json.dumps(resp)
     str_response = 'var '+table_name+'=\n'+str_response[:-1] +'\n];'
     return str_response
 
