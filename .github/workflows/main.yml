@@ -29,6 +29,8 @@ jobs:
       # Runs a single command using the runners shell
       - name: Read the data into JS files
         run: python tools/loaddata.py
+        env:
+          AIRTABLE_APIKEY: ${{secrets.AIRTABLE_APIKEY}}
 
       # Runs a set of commands using the runners shell
       - name: Commit and push the new files
