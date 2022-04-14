@@ -203,7 +203,7 @@
           <div v-html="event.content"></div>
 
           <div class="event-speaker-container">
-              <div class="event-speaker-container-img" :style="'background-image:url('+event.authorImage.url+')'">
+              <div class="event-speaker-container-img" :style="'background-image:url('+ (event.authorImage && event.authorImage.length ? event.authorImage[0].thumbnails.large.url : '') +')'">
                 </div>
                 <div class="event-speaker-container-titles">
                     <div class="transition event-speaker-container-name">{{event.author}}</div>
