@@ -165,7 +165,7 @@ body.style-intro {
 }
 
 body.style-tickets {
-  --background: var(--background);
+  --background: #ED6F6B;
   --primary-dark: #011715;
   --primary-dark-disabled: #ccc;
 
@@ -189,9 +189,9 @@ body.style-speakers {
   --primary-dark: #011715;
   --primary-dark-disabled: #ccc;
 
-  --secondary-dark: var(--background);
+  --secondary-dark: #ED6F6B;
   --side-color: #fff;
-  --side-highlight: var(--background);
+  --side-highlight: #ED6F6B;
 }
 
 body.style-venue {
