@@ -179,9 +179,9 @@ body.style-events {
   --primary-dark: #011715;
   --primary-dark-disabled: #ccc;
 
-  --secondary-dark: #4f8df9;
+  --secondary-dark: #ED6F6B;
   --side-color: #fff;
-  --side-highlight: #4f8df9;
+  --side-highlight: #ED6F6B;
 }
 
 body.style-speakers {
@@ -189,9 +189,9 @@ body.style-speakers {
   --primary-dark: #011715;
   --primary-dark-disabled: #ccc;
 
-  --secondary-dark: #4f8df9;
+  --secondary-dark: #ED6F6B;
   --side-color: #fff;
-  --side-highlight: #4f8df9;
+  --side-highlight: #ED6F6B;
 }
 
 body.style-venue {
@@ -199,9 +199,9 @@ body.style-venue {
   --primary-dark: #011715;
   --primary-dark-disabled: #ccc;
 
-  --secondary-dark: #4f8df9;
+  --secondary-dark: #ED6F6B;
   --side-color: #fff;
-  --side-highlight: #4f8df9;
+  --side-highlight: #ED6F6B;
 }
 
 body.style-video {
@@ -209,9 +209,9 @@ body.style-video {
   --primary-dark: #fff;
   --primary-dark-disabled: #aaa;
 
-  --secondary-dark: #4f8df9;
+  --secondary-dark: #ED6F6B;
   --side-color: #fff;
-  --side-highlight: #4f8df9; 
+  --side-highlight: #ED6F6B;
 }
 
 body.style-credits {
@@ -219,9 +219,9 @@ body.style-credits {
   --primary-dark: #011715;
   --primary-dark-disabled: #ccc;
 
-  --secondary-dark: #4f8df9;
+  --secondary-dark: #ED6F6B;
   --side-color: #fff;
-  --side-highlight: #4f8df9;
+  --side-highlight: #ED6F6B;
 }
 
 .section {
