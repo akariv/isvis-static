@@ -94,7 +94,7 @@ a {
   z-index: 99;
   width: 100%;
   height: 100%;
-  background: #ffd03e;
+  background: var(--background);
   display: flex;
   position: fixed;
   opacity: 1;
@@ -156,7 +156,7 @@ body.style-video .map-marker {
 
 /* style classes */
 body.style-intro {
-  --background: #ffd03e;
+  --background: #ED6F6B;
   --primary-dark: #011715;
   --primary-dark-disabled: #ccc;
   --secondary-dark: #fff;
@@ -165,7 +165,7 @@ body.style-intro {
 }
 
 body.style-tickets {
-  --background: #ffd03e;
+  --background: var(--background);
   --primary-dark: #011715;
   --primary-dark-disabled: #ccc;
 
@@ -189,9 +189,9 @@ body.style-speakers {
   --primary-dark: #011715;
   --primary-dark-disabled: #ccc;
 
-  --secondary-dark: #ffd03e;
+  --secondary-dark: var(--background);
   --side-color: #fff;
-  --side-highlight: #ffd03e;
+  --side-highlight: var(--background);
 }
 
 body.style-venue {
