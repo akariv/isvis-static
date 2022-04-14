@@ -268,7 +268,7 @@ nav .none i {
   font-family: var(--text);
   font-weight: 700;
   font-size: 16px;
-  letter-spacing: 2.8px;
+  letter-spacing: 1.6px;
   padding-bottom: 8px;
   color: var(--primary-dark);
 }
