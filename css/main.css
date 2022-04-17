@@ -1167,7 +1167,7 @@ body.style-video .scrollToLink.video-link {
 }
 
 .modal-left {
-  width: 320px;
+  width: 100%;
 }
 
 .modal-left,
