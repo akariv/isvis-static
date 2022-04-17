@@ -1093,7 +1093,7 @@ body.style-video .scrollToLink.video-link {
 
 /* video modal */
 .videos-modal-backdrop {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.4);
   position: fixed;
   width: 100%;
   height: 100%;
@@ -1135,20 +1135,28 @@ body.style-video .scrollToLink.video-link {
   pointer-events: all;
   display: none;
   background: #fafafa;
-  max-width: 700px;
-  max-height: 520px;
+  max-width: 500px;
+/*   max-height: 520px; */
   padding: 24px;
   box-shadow: 0 15px 12px 0 rgba(0, 0, 0, 0.22),
     0 19px 38px 0 rgba(0, 0, 0, 0.3);
   flex-direction: column;
-  position: relative;
+  position: fixed;
   border-radius: 6px;
+  top: 16px;
+  bottom: 16px;
+  right: 0
 }
 
 .flex-rows {
   display: flex;
   flex-direction: row;
 }
+
+.videos-modal>.flex-rows{
+  display: block;
+}
+  
 
 .videos-modal.active-modal {
   display: flex;
@@ -1168,11 +1176,6 @@ body.style-video .scrollToLink.video-link {
   padding-right: 20px;
 }
 
-.modal-right {
-  overflow-y: scroll;
-  max-height: 500px;
-}
-
 .videos-modal-closebbutton {
   position: absolute;
   top: 16px;
@@ -1180,7 +1183,8 @@ body.style-video .scrollToLink.video-link {
 }
 
 .modal-video-tile {
-  width: 300px;
+  width: 100%;
+  margin-bottom: 24px;
 }
 
 .modal-youtube-link {
