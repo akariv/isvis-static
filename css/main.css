@@ -1,6 +1,8 @@
 @import "fonts.css";
 @import "fonts/inter-ui.css";
 
+--primary_color: #8F5CD1;
+
 body {
   --padding-date: 128px;
   box-sizing: border-box;
@@ -155,8 +157,9 @@ body.style-video .map-marker {
 }
 
 /* style classes */
+
 body.style-intro {
-  --background: #ED6F6B;
+  --background: var(--primary_color);
   --primary-dark: #011715;
   --primary-dark-disabled: #ccc;
   --secondary-dark: #fff;
@@ -165,7 +168,7 @@ body.style-intro {
 }
 
 body.style-tickets {
-  --background: #ED6F6B;
+  --background: var(--primary_color);
   --primary-dark: #011715;
   --primary-dark-disabled: #ccc;
 
@@ -179,9 +182,9 @@ body.style-events {
   --primary-dark: #011715;
   --primary-dark-disabled: #ccc;
 
-  --secondary-dark: #ED6F6B;
+  --secondary-dark: var(--primary_color);
   --side-color: #fff;
-  --side-highlight: #ED6F6B;
+  --side-highlight: var(--primary_color);
 }
 
 body.style-speakers {
@@ -189,9 +192,9 @@ body.style-speakers {
   --primary-dark: #011715;
   --primary-dark-disabled: #ccc;
 
-  --secondary-dark: #ED6F6B;
+  --secondary-dark: var(--primary_color);
   --side-color: #fff;
-  --side-highlight: #ED6F6B;
+  --side-highlight: var(--primary_color);
 }
 
 body.style-venue {
@@ -199,9 +202,9 @@ body.style-venue {
   --primary-dark: #011715;
   --primary-dark-disabled: #ccc;
 
-  --secondary-dark: #ED6F6B;
+  --secondary-dark: var(--primary_color);
   --side-color: #fff;
-  --side-highlight: #ED6F6B;
+  --side-highlight: var(--primary_color);
 }
 
 body.style-video {
@@ -209,9 +212,9 @@ body.style-video {
   --primary-dark: #fff;
   --primary-dark-disabled: #aaa;
 
-  --secondary-dark: #ED6F6B;
+  --secondary-dark: var(--primary_color);
   --side-color: #fff;
-  --side-highlight: #ED6F6B;
+  --side-highlight: var(--primary_color);
 }
 
 body.style-credits {
@@ -219,9 +222,9 @@ body.style-credits {
   --primary-dark: #011715;
   --primary-dark-disabled: #ccc;
 
-  --secondary-dark: #ED6F6B;
+  --secondary-dark: var(--primary_color);
   --side-color: #fff;
-  --side-highlight: #ED6F6B;
+  --side-highlight: var(--primary_color);
 }
 
 .section {
