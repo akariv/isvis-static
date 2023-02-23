@@ -1,9 +1,9 @@
 @import "fonts.css";
 @import "fonts/inter-ui.css";
 
---primary_color: #8F5CD1;
-
 body {
+  --primary_color: #8F5CD1;
+  
   --padding-date: 128px;
   box-sizing: border-box;
   overscroll-behavior: none;
@@ -159,7 +159,7 @@ body.style-video .map-marker {
 /* style classes */
 
 body.style-intro {
-  --background: var(--primary_color);
+  --background: #8F5CD1;
   --primary-dark: #011715;
   --primary-dark-disabled: #ccc;
   --secondary-dark: #fff;
@@ -168,7 +168,7 @@ body.style-intro {
 }
 
 body.style-tickets {
-  --background: var(--primary_color);
+  --background: #8F5CD1;
   --primary-dark: #011715;
   --primary-dark-disabled: #ccc;
 
@@ -182,9 +182,9 @@ body.style-events {
   --primary-dark: #011715;
   --primary-dark-disabled: #ccc;
 
-  --secondary-dark: var(--primary_color);
+  --secondary-dark: #8F5CD1;
   --side-color: #fff;
-  --side-highlight: var(--primary_color);
+  --side-highlight: #8F5CD1;
 }
 
 body.style-speakers {
@@ -192,9 +192,9 @@ body.style-speakers {
   --primary-dark: #011715;
   --primary-dark-disabled: #ccc;
 
-  --secondary-dark: var(--primary_color);
+  --secondary-dark: #8F5CD1;
   --side-color: #fff;
-  --side-highlight: var(--primary_color);
+  --side-highlight: #8F5CD1;
 }
 
 body.style-venue {
@@ -202,9 +202,9 @@ body.style-venue {
   --primary-dark: #011715;
   --primary-dark-disabled: #ccc;
 
-  --secondary-dark: var(--primary_color);
+  --secondary-dark: #8F5CD1;
   --side-color: #fff;
-  --side-highlight: var(--primary_color);
+  --side-highlight: #8F5CD1;
 }
 
 body.style-video {
@@ -212,9 +212,9 @@ body.style-video {
   --primary-dark: #fff;
   --primary-dark-disabled: #aaa;
 
-  --secondary-dark: var(--primary_color);
+  --secondary-dark: #8F5CD1;
   --side-color: #fff;
-  --side-highlight: var(--primary_color);
+  --side-highlight: #8F5CD1;
 }
 
 body.style-credits {
@@ -222,9 +222,9 @@ body.style-credits {
   --primary-dark: #011715;
   --primary-dark-disabled: #ccc;
 
-  --secondary-dark: var(--primary_color);
+  --secondary-dark: #8F5CD1;
   --side-color: #fff;
-  --side-highlight: var(--primary_color);
+  --side-highlight: #8F5CD1;
 }
 
 .section {
