@@ -104,10 +104,10 @@ function applyRoute(pos,city) {
 				type: 'Feature',
 				geometry: {
 					type: 'Point',
-					coordinates: [34.8008359, 32.0900011]
+					coordinates: [35.0188646, 32.7623948] // Haifa
 				},
 				properties: {
-					title: '12 May<br><b>ISVIS 2022</b>'
+					title: '17 May<br><b>ISVIS 2023</b>'
 				}
 			}
 		]
@@ -130,7 +130,7 @@ function applyRoute(pos,city) {
 
 	map.fitBounds([
 		currcoord,
-		[34.8008359, 32.0900011]
+		[35.0188646, 32.7623948]
 	], {
 		padding: {
 			top: 100,
@@ -151,7 +151,8 @@ function applyRoute(pos,city) {
 
 function getRoute(startPos) {
 	var start = startPos;
-	var end = [34.8008359, 32.0900011]; // Shenkar
+	var end = [35.0188646, 32.7623948]; // Haifa
+	// var end = [34.8008359, 32.0900011]; // Shenkar
 	var directionsRequest = 'https://api.mapbox.com/directions/v5/mapbox/walking/' + start[0] + ',' + start[1] + ';' + end[0] + ',' + end[1] + '?geometries=geojson&access_token=' + mapboxgl.accessToken;
 	$.ajax({
 		method: 'GET',
