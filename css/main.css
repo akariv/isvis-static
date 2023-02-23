@@ -2,8 +2,6 @@
 @import "fonts/inter-ui.css";
 
 body {
-  --primary_color: #934DED;
-  
   --padding-date: 128px;
   box-sizing: border-box;
   overscroll-behavior: none;
