@@ -157,7 +157,7 @@ body.style-video .map-marker {
 /* style classes */
 
 body.style-intro {
-  --background: #934DED;
+  --background: #A675E6;
   --primary-dark: #011715;
   --primary-dark-disabled: #ccc;
   --secondary-dark: #fff;
@@ -166,7 +166,7 @@ body.style-intro {
 }
 
 body.style-tickets {
-  --background: #934DED;
+  --background: #A675E6;
   --primary-dark: #011715;
   --primary-dark-disabled: #ccc;
 
@@ -180,9 +180,9 @@ body.style-events {
   --primary-dark: #011715;
   --primary-dark-disabled: #ccc;
 
-  --secondary-dark: #934DED;
+  --secondary-dark: #A675E6;
   --side-color: #fff;
-  --side-highlight: #934DED;
+  --side-highlight: #A675E6;
 }
 
 body.style-speakers {
@@ -190,9 +190,9 @@ body.style-speakers {
   --primary-dark: #011715;
   --primary-dark-disabled: #ccc;
 
-  --secondary-dark: #934DED;
+  --secondary-dark: #A675E6;
   --side-color: #fff;
-  --side-highlight: #934DED;
+  --side-highlight: #A675E6;
 }
 
 body.style-venue {
@@ -200,9 +200,9 @@ body.style-venue {
   --primary-dark: #011715;
   --primary-dark-disabled: #ccc;
 
-  --secondary-dark: #934DED;
+  --secondary-dark: #A675E6;
   --side-color: #fff;
-  --side-highlight: #934DED;
+  --side-highlight: #A675E6;
 }
 
 body.style-video {
@@ -210,9 +210,9 @@ body.style-video {
   --primary-dark: #fff;
   --primary-dark-disabled: #aaa;
 
-  --secondary-dark: #934DED;
+  --secondary-dark: #A675E6;
   --side-color: #fff;
-  --side-highlight: #934DED;
+  --side-highlight: #A675E6;
 }
 
 body.style-credits {
@@ -220,9 +220,9 @@ body.style-credits {
   --primary-dark: #011715;
   --primary-dark-disabled: #ccc;
 
-  --secondary-dark: #934DED;
+  --secondary-dark: #A675E6;
   --side-color: #fff;
-  --side-highlight: #934DED;
+  --side-highlight: #A675E6;
 }
 
 .section {
