@@ -273,6 +273,10 @@ nav .none i {
   color: var(--primary-dark);
 }
 
+.lockup img{
+  margin-bottom: 8px;
+}
+
 nav li {
   font-weight: 600;
   /* font-style: italic; */
