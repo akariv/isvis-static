@@ -210,7 +210,7 @@
           <div v-html="event.content"></div>
 
           <div class="event-speaker-container">
-              <div class="event-speaker-container-img" :style="'background-image:url('+ (event.authorImage && event.authorImage.length ? event.authorImage[0].thumbnails.large.url : '') +')'">
+              <div class="event-speaker-container-img" :style="'background-image:url('+ (event.authorImage || '') +')'">
                 </div>
                 <div class="event-speaker-container-titles">
                     <div class="transition event-speaker-container-name">{{event.author}}</div>
@@ -257,8 +257,8 @@
         <div class="videos-modal-container" :class="{'videos-modal-container--active':(isModalActive==true)}">
       <div class="videos-modal" :class="{'active-modal':(isModalActive==true)}">
         <div class="modal-top">
-          <div class="modal-author">
-            <div class="modal-image" :style="'background-image:url(' + modalData.authorImage.url + ');'" v-if="modalData.authorImage"></div>
+          <div class="modal-author"><pre></pre>
+            <div class="modal-image" :style="'background-image:url(' + modalData.authorImage + ');'" v-if="modalData.authorImage">{{modalData.authorImage}}</div>
             <div class="modal-author-text">
               <div class="modal-author-name">{{modalData.videoAuthor}}<div class="modal-video-social">
                   <a class="modal-video-social-fb" :href="modalData.social_fb" v-if="modalData.social_fb"><svg width="24"

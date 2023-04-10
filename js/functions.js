@@ -150,9 +150,7 @@ var appData = new Vue({
           allEvents[i].authorBio = converter.makeHtml(allEvents[i].authorBio);
           allEvents[i].authorSocial = converter.makeHtml(allEvents[i].authorSocial);
           if (!allEvents[i].authorImage) {
-            allEvents[i].authorImage = {
-              url: ""
-            }
+            allEvents[i].authorImage = '';
           }
           if (!allEvents[i].image) {
             allEvents[i].image = {

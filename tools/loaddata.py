@@ -1,10 +1,20 @@
 import json
 import requests
 import os
+import codecs
 
 base_id = 'appxDd09nZFUbJcMn'
 api_key = os.getenv('AIRTABLE_APIKEY')
 headers = {'Authorization': 'Bearer '  + api_key}
+
+def processImage(image):
+    if image and len(image) > 0:
+        url = image[0].get('thumbnails', {}).get('large', {}).get('url')
+        if url:
+            image = requests.get(url).content
+            return 'data:image/png;base64,' + codecs.encode(image, 'base64').decode().replace('\n', '').replace('\r', '').replace('\t', '').replace(' ', '')
+    return ''
+
 def get_airtable_data(table_name):
     resp = []
     url = "https://api.airtable.com/v0/" + base_id + "/" + table_name
@@ -16,6 +26,8 @@ def get_airtable_data(table_name):
         fields = elem['fields']
         if fields.get('v') == 'false':
             fields['v'] = False
+        if fields.get('authorImage'):
+            fields['authorImage'] = processImage(fields['authorImage'])
         new_dict.update(fields)
         resp.append(new_dict)
     
