@@ -18,21 +18,30 @@ def processImage(image):
 def get_airtable_data(table_name):
     resp = []
     url = "https://api.airtable.com/v0/" + base_id + "/" + table_name
-    response = requests.get(url, headers=headers, params={'view': 'Grid view'})
-    airtable_response = response.json()
-    airtable_response = airtable_response['records']
-    for elem in airtable_response:
-        new_dict = {'id': elem['id'], 'createdTime': elem['createdTime']}
-        fields = elem['fields']
-        if fields.get('v') == 'false':
-            fields['v'] = False
-        if fields.get('authorImage'):
-            fields['authorImage'] = processImage(fields['authorImage'])
-        new_dict.update(fields)
-        resp.append(new_dict)
+    done = False
+    offset = None
+    while not done:
+        params = {'view': 'Grid view'}
+        if offset:
+            params['offset'] = offset
+        response = requests.get(url, headers=headers, params=params)
+        airtable_response = response.json()
+        offset = airtable_response.get('offset')
+        airtable_response = airtable_response['records']
+        for elem in airtable_response:
+            new_dict = {'id': elem['id'], 'createdTime': elem['createdTime']}
+            fields = elem['fields']
+            if fields.get('v') == 'false':
+                fields['v'] = False
+            if fields.get('authorImage'):
+                fields['authorImage'] = processImage(fields['authorImage'])
+            new_dict.update(fields)
+            resp.append(new_dict)
+        if not offset:
+            done = True
     
-    str_response = json.dumps(resp)
-    str_response = 'var '+table_name+'=\n'+str_response[:-1] +'\n];'
+    str_response = json.dumps(resp, indent=4, sort_keys=True, ensure_ascii=False)
+    str_response = 'var '+table_name+'=\n'+str_response[:-1] + '\n;'
     return str_response
 
 
