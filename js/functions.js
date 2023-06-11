@@ -61,7 +61,7 @@ var appData = new Vue({
     allViedoTagsActive: [],
     allViedoYears: [],
     activeTag: '',
-    activeYear: 2022,
+    activeYear: 2023,
     sortBy: 'videoLength',
     isModalActive: false,
     modalData: {}
