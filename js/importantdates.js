@@ -25,5 +25,5 @@ var importantdates=
         "dateTitle": "ISVIS 2023",
         "id": "recslb1ay4x1LpFMX"
     }
-
+]
 ;

@@ -365,5 +365,5 @@ var allEvents=
         "title": "End of conference",
         "title-for-yt": "ISVIS2022: End of conference / "
     }
-
+]
 ;

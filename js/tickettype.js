@@ -43,5 +43,5 @@ var tickettype=
         "price-desc": "complimentary lunch & coffee included",
         "title": "Conference + Workshop: Designing Better Data Products for AI"
     }
-
+]
 ;
