@@ -41,7 +41,7 @@ def get_airtable_data(table_name):
             done = True
     
     str_response = json.dumps(resp, indent=4, sort_keys=True, ensure_ascii=False)
-    str_response = 'var '+table_name+'=\n'+str_response[:-1] + '\n;'
+    str_response = 'var '+table_name+'=\n'+str_response + '\n;'
     return str_response
 
 
